@@ -52,5 +52,9 @@
 <a href="viewJsp_1_stringTest_find.ljs">viewJsp_1_stringTest_find.ljs 실행</a><br>
 <a href="viewJsp_2_modelandview_find.ljs">viewJsp_2_modelandview_find.ljs 실행</a><br>
 <a href="viewJsp_3_voidTest_find.ljs">viewJsp_3_voidTest_find.ljs 실행</a><br>
+<hr>
+<a href="formdata_find.ljs">FORM DATA 실행</a>
+<hr>
+<a href="autowiredTest.ljs">오토와이어드(의존성 주입 : DI) 실행</a>
 </body>
 </html>

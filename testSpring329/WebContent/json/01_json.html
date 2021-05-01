@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01_json.html</title>
+<script type="text/javascript">
+
+	/*
+		########################################
+		객체
+			객체 리터럴로 객체 생성하기 : JSON 데이터이다.
+			var card = {suit:"하트", rank:"A"};
+			var card1 = {"suit":"하트", rank:"A"};
+			객체 리터럴 : {....}
+			변수 card
+			프로퍼티 이름 : suit, "suit"
+			프로퍼티 값 : "하트", "A"
+		########################################
+		
+		JSON : JavaScript Object Notation
+			1. 경량의 데이터 교환형식 (xml보다 경량)
+			2. 다른 프로그래밍언어간에 데이터 교환에 사용
+			3. jQuery에서는 기본 문법 체계가 JSON이다.
+			4. JSON 자체가 하나의 데이터로 사용
+			5. Ajax 에서는 JSON을 통신시 데이터 규격으로 사용
+				: JSON 데이터를 서버에 데이터를 전송한다.
+				  "key":"value", "key":"value", .....}
+				  QueryString 처럼 보낸다.
+				  
+			사용예)
+			var json = {"key":"value", "key":"value", ......}
+	*/
+	
+	// 자바스크립트 변수 ju로 객체 리터럴을 선언 및 초기화
+	// 객체리터럴 프로퍼티 중 하나인 name에 프로퍼티 값 안종빈을 초기화했다.
+	
+	// 자바스크립트에서는 데이터타입을 정하지 않아도 된다. (JS 인터프리터가 데이터 모습 보고 알아서 정해줌)
+	
+	// JS에서 데이터타입 변수는 var를 사용한다. <--- ECMAScript 3
+	// let(전역변수 개념), const(상수) <--- ECMAScript 5, 6
+	
+	// 데이터 타입 var 선언, 변수명 ju 선언
+	// {....} : 객체를 초기화한다. (더 자세히 이야기 하면 리터럴 객체)
+	// 프로퍼티 이름 : 프로퍼티 값
+	// key : value
+	// 프로퍼티 이름: 그냥 써도 되고 "" 안에 써도 된다.
+	// 프로퍼티 값: 자바스크립트 데이터 타입이 모두 올 수 있다. : 문자, 숫자, 객체, 객체 배열, 함수 등
+	var ju = {
+			"name" : "안종빈",
+			"age" : 35,
+			"gender" : "남자",
+			"personality" : "시크 & 자상"
+		};
+			
+	// ju라는 변수 이름으로 출력 : [object Object] 라고 보여진다.
+	alert("ju >>> : " + ju);
+	
+	// 브라우저 출력(태그 사용 가능)
+	document.write("<h1>" + ju.name + "</h1>"); // ju 객체의 "name" 프로퍼티에 해당하는 프로퍼티 값
+	document.write("<h1>" + ju.age +"</h1>"); // ju 객체의 "age" 프로퍼티에 해당하는 프로퍼티 값
+	document.write("<h1>" + ju.gender +"</h1>"); //ju 객체의 "gender" 프로퍼티에 해당하는 프로퍼티 값
+	document.write("<h1>" + ju.personality +"</h1>"); // ju 객체의 "personality" 프로퍼티에 해당하는 프로퍼티 값
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

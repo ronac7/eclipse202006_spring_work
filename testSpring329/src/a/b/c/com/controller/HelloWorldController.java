@@ -5,6 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
+// 사용자 정의 HelloWorldController의 결과는
+// 디스패쳐 서블릿으로 리턴한다!
 @Controller
 public class HelloWorldController {
 

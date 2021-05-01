@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02_json.html</title>
+<script type="text/javascript">
+
+	function initCompany() {
+		
+		var company = {
+				
+				"name":"(주)JS컴퍼니",
+				"since": 2021,
+				/* department 프로퍼티의 프로퍼티 값으로 배열 들어옴. -> Index 사용 가능!  */
+				"department":["기획팀","영업팀","디자인팀","개발팀"],
+				"biz": ["소프트웨어개발팀", "통신판매업", "위치정보서비스"]
+		};
+	
+		alert(company);
+		
+		// company 리터럴 객체의 name과 무관, html 태그 안의 엘리먼트 중에서 찾는다.
+		document.getElementById("name").innerHTML = company.name;
+		document.getElementById("since").innerHTML = company.since;
+		
+		var deptLi = "";
+		
+		// department 프로퍼티의 프로퍼티 값(배열)의 i번째 데이터를 deptLi에 추가
+		for (var i=0; i<company.department.length; i++) {
+			deptLi += "<li>" + company.department[i] + "</li>";
+		}
+		// HTML 태그중 id가 "department" 인 것을 찾아 deptLi 를 써(?)준다.
+		document.getElementById("department").innerHTML = deptLi;
+		
+		
+		var bizLi = "";
+		for (var i=0; i<company.biz.length; i++) {
+			bizLi += "<li>" + company.biz[i] + "</li>"; 
+		}
+		document.getElementById("biz").innerHTML = bizLi;
+	}
+
+</script>
+</head>
+<body onload="initCompany()">
+	<h1 id="name"></h1>
+	<p>
+		<strong>설립년도 : </strong><span id="since"></span>
+	</p>
+	<h2>주요 사업 부서</h2>
+	<ul id="department"></ul>
+	<h2>주요 사업 분야</h2>
+	<ul id="biz"></ul>
+</body>
+</html>

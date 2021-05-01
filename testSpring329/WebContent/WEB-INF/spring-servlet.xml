@@ -16,7 +16,7 @@
 						http://www.springframework.org/schema/mvc
 						http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 						
-				
+	<!-- 핸들러 매핑 -->
 	<mvc:annotation-driven />
 	<!-- 
 		Spring MVC @Controller에 요청을 보내기 위해 필요한
@@ -24,7 +24,6 @@
 		HandlerMapping : HTTP 요청정보를 이용해서 컨트롤러를 찾아주는 기능
 		HandlerAdapter : HandlerMapping 을 통해 찾은 컨트롤러를 직접 실행하는 기능을  수행
 	 -->		
-	
 	
 	<context:component-scan base-package="a.b.c.com.**" />
 	<!-- 
@@ -35,6 +34,7 @@
 			@Qualifier Annotation(빈 식별)을 인식할 수 있다.
 	 -->
 
+	<!-- 뷰 분석 : 뷰 리졸 -->
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
 		<property name="prefix" value="/WEB-INF/view/" />
