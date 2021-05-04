@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 // 디스패쳐 서블릿으로 리턴한다!
 @Controller
 public class HelloWorldController {
-
-	@RequestMapping("helloWorld")
-	public String helloWorlds(Model model) {
-		model.addAttribute("message", "Hello World Spring!!!!");
-		return "helloWorld";
-	}
 	
 	@RequestMapping("helloWorld_Controller_find")
 	public String helloWorld(Model model) {
@@ -25,10 +19,11 @@ public class HelloWorldController {
 		return "helloWorld_return_jspfile_name";
 	}
 	
+	// 매핑으로 찾을 이름값 = value 에다가 method 방식이 GET 이라는 정보도 추가
 	@RequestMapping(value="helloWorld_get", method=RequestMethod.GET)
     public String testGet(Model m) {
 		
-		m.addAttribute("msg", "RequestMethod GET 방식 >>> : ");
+		m.addAttribute("msg", "RequestMethod GET 방식 msg 값!!");
 		
 		return "helloGet";
 	}
@@ -37,7 +32,7 @@ public class HelloWorldController {
 	@RequestMapping(value="helloWorld_post", method=RequestMethod.POST)
 	public String testPost(Model m) {
 	
-		m.addAttribute("msg", "RequestMethod POST 방식 >>> : ");
+		m.addAttribute("msg", "RequestMethod POST 방식 msg 값!!!");
 		
 		return "helloPost";
 	}

@@ -9,7 +9,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		// alert("ready >>> : ");
+		alert("ready >>> : ");
 		
 		// GET 방식
 		$(document).on("click", "#getbtn", function(){

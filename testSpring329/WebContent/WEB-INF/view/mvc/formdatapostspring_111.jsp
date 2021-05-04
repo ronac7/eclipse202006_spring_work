@@ -21,6 +21,7 @@ ${formDataVO.getDatanum() } <br>
 ${formDataVO.getDataid() } <br>
 ${formDataVO.getDatapw() } <br>
 ${formDataVO.getDataname() } <br>
+${fvo2.getDataname() } <br>
 <hr>
 </body>
 </html>

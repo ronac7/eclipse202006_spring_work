@@ -12,6 +12,8 @@ list.add(new MemberVO("홍길동", "hong", "1234", 33, "서울특별시", "010-1
 list.add(new MemberVO("홍길동", "hong", "1234", 44, "서울특별시", "010-1111-1111"));
 list.add(new MemberVO("홍길동", "hong", "1234", 55, "서울특별시", "010-1111-1111"));
 
+// pageContext : JSP 기본 내장 객체 : 따로 선언하지 않아도 참조하여 사용가능
+// 같은 JSP 페이지 내에서는 서로 값을 공유할 수 있다.
 pageContext.setAttribute("list", list);
 %>
 <!DOCTYPE html>
@@ -54,6 +56,10 @@ pageContext.setAttribute("list", list);
 </ul>
 <hr />
 ○ EL 표기법<br />
+<!--
+	EL 표기법에서의 list는 ArrayList<MemberVO> list 의 list 가 아니라
+	pageContext.setAttribute("list", list); 로 세팅해준 list이다!
+-->
 <ul>
 	<li>${list[0].irum } ${list[0].id } ${list[0].pw } ${list[0].age } ${list[0].addr } ${list[0].tel }</li>
 	<li>${list[1].irum } ${list[1].id } ${list[1].pw } ${list[1].age } ${list[1].addr } ${list[1].tel }</li>
@@ -63,6 +69,9 @@ pageContext.setAttribute("list", list);
 </ul>
 <hr />
 ○ JSTL core<br />
+<!--
+	여기서의 list도 pageContext.setAttribute를 통해 세팅해준 list !!
+-->
 <ul>
 	<c:forEach var="i" items="${list }">
 		<li>${i.irum } ${i.id  } ${i.pw  } ${i.age  } ${i.addr } ${i.tel  }</li>

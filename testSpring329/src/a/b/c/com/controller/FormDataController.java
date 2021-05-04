@@ -56,8 +56,8 @@ public class FormDataController {
 	
 	@RequestMapping(value="formdata_post_spring", method=RequestMethod.POST)
 	public String formdataPost_Spring(@ModelAttribute("ma_fvo1") FormDataVO fvo1) {
-
 //		@ModelAttribute 매핑을 한다.fvo1
+//		ma_fvo1 선언하고 addAtribute 한 것과 같은 결과
 		return "mvc/formdatapostspring";
 	}
 	

@@ -16,6 +16,7 @@
 ○ 형식2 : <fmt:formatNumber value="${num }" groupingUsed="false"/><br />
 ○ 형식3 : <fmt:formatNumber value="${num }" pattern="#,##0" /><br />
 ○ 형식4 : <fmt:formatNumber value="${num }" pattern="#,##0개" /><br />
+<!-- //? #과 0의 차이는 잘 모르겠지만 컴마 뒤에 #이 3개면 3자리로 끊고, 0이 포함되어도 컴마뒤에 3개이면 3자리로 끊는다. -->
 
 <h3>기타 포맷 : 통화, 백분율</h3>
 <%--통화 기호를 입력할 경우 특수문자 : ㄹ → 한자 --%>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,13 +38,13 @@
 <body>
 스프링 MVC 메인 : Spring 3.2.9 library
 <hr>
-<a href="helloWorld.ljs">HelloWorld 실행</a><br>
-<hr>
 <a href="helloWorld_Controller_find.ljs">HelloWorld 실행</a><br>
 <a href="helloWorld_get.ljs">HelloWorld GET 실행</a><br>
+<!-- a태그 이용시 POST방식 사용 불가 -->
 <a href="helloWorld_post.ljs">HelloWorld POST 실행</a><br>
 <form name="methodForm" id="methodForm">
 	<button type="button" id="getbtn">GET</button>
+	<!-- a태그가 아닌 $("#methodForm").attr 사용했기 때문에 POST방식 사용 가능!! -->
 	<button type="button" id="postbtn">POST</button>
 </form>
 <hr>
